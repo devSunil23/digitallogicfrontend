@@ -1,12 +1,13 @@
 import React from "react";
 import "./styles/home.css";
-const Menu = ({ menu, handleClickMenu }) => {
+import { NavLink } from "react-router-dom";
+const Menu = ({ menu, destinationPath }) => {
   return (
     <>
       <div className="menuContainer">
-        <p className="menu" onClick={handleClickMenu}>
+        <NavLink className="menu" to={destinationPath}>
           {menu}
-        </p>
+        </NavLink>
       </div>
     </>
   );

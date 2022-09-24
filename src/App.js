@@ -5,8 +5,9 @@ import Signup from "./Signup";
 import Login from "./Login";
 import Home from "./Home";
 import Product from "./Product";
-import Order from "./Order";
 import Customer from "./Customer";
+import Order from "./Order";
+import Welome from "./Welome";
 const App = () => {
   return (
     <>
@@ -15,10 +16,12 @@ const App = () => {
           {/** This is for routing */}
           <Route path="/" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/order" element={<Order />} />
-          <Route path="/customer" element={<Customer />} />
+          <Route path="/home" element={<Home />}>
+            <Route path="" element={<Welome />} />
+            <Route path="product" element={<Product />} />
+            <Route path="order" element={<Order />} />
+            <Route path="customer" element={<Customer />} />
+          </Route>
         </Routes>
       </Router>
     </>
