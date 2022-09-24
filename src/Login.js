@@ -14,8 +14,8 @@ const Login = () => {
   const [formRegistrationError, setformRegistrationError] = useState({});
   const [commonUrl] = useAtom(commonUrlAtom);
   const [showValid, setShowValid] = useState(false);
-  const [userName, setUserName] = useAtom(userNameAtom);
-  const [token, setToken] = useAtom(tokenAtom);
+  const [setUserName] = useAtom(userNameAtom);
+  const [setToken] = useAtom(tokenAtom);
   const navigate = useNavigate();
   const [dataInfo, setDataInfo] = useState({
     userName: "",

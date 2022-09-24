@@ -6,7 +6,7 @@ import "./styles/home.css";
 import { tokenAtom } from "./models";
 import { commonUrlAtom } from "./models";
 const Customer = () => {
-  const [token, setToken] = useAtom(tokenAtom);
+  const [token] = useAtom(tokenAtom);
   const [commonUrl] = useAtom(commonUrlAtom);
   const navigate = useNavigate();
   /** This is for check authentication  */

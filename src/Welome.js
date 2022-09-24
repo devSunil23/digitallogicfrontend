@@ -7,8 +7,8 @@ import { tokenAtom } from "./models";
 import { commonUrlAtom } from "./models";
 import axios from "axios";
 const Welome = () => {
-  const [userName, setUserName] = useAtom(userNameAtom);
-  const [token, setToken] = useAtom(tokenAtom);
+  const [userName] = useAtom(userNameAtom);
+  const [token] = useAtom(tokenAtom);
   const [commonUrl] = useAtom(commonUrlAtom);
   const navigate = useNavigate();
   /** This is for check authentication  */

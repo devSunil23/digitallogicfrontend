@@ -4,16 +4,10 @@ import { useNavigate, Outlet } from "react-router-dom";
 import "./styles/home.css";
 import { tokenAtom } from "./models";
 import axios from "axios";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Product from "./Product";
-import Customer from "./Customer";
-import Order from "./Order";
 import { commonUrlAtom } from "./models";
 import Menu from "./Menu";
-import { Routes, Route } from "react-router-dom";
-import Welome from "./Welome";
 const Home = () => {
-  const [token, setToken] = useAtom(tokenAtom);
+  const [token] = useAtom(tokenAtom);
   const [commonUrl] = useAtom(commonUrlAtom);
   const navigate = useNavigate();
 
